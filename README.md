@@ -1,1 +1,1 @@
-project_template1
+project_templateSemaev
