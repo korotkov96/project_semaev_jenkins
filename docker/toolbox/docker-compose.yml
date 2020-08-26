@@ -2,6 +2,7 @@ version: '3'
 
 services:
   adminer:
+    image: korotkovda/toolbox:latest
     build: ./adminer
     restart: always
     ports:
