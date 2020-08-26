@@ -18,6 +18,7 @@ pipeline {
                 	sh 'docker-compose build -t korotkovda/toolbox:latest'
                 }
             }
+        }
      stage("docker push") {
             steps {
                 echo " ============== start pushing image =================="
