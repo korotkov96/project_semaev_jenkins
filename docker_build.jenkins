@@ -15,12 +15,16 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
-                	sh 'docker-compose build'
+                	sh 'docker-compose build -t korotkovda/toolbox:latest'
                 }
             }
+     stage("docker push") {
             steps {
-                   sh '
-                }
+                echo " ============== start pushing image =================="
+                sh '''
+                docker push korotkovda/toolbox:latest
+                '''
             }
         }
-    }
+      }
+  }
