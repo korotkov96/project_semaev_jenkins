@@ -3,11 +3,8 @@
 properties([disableConcurrentBuilds()])
 
 pipeline {
-    node('Node2') {
-    build 'JobNumber-8'
-    }
     agent { 
-        label 'master'
+        label 'ubuntu_docker'
         }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
