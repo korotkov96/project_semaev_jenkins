@@ -15,9 +15,12 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
-                	sh 'docker-compose up —-build'
+                	sh 'docker-compose build'
                 }
             }
+            steps {
+                   sh '
+                }
             }
         }
     }
