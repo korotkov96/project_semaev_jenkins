@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  adminer:
+    build: ./adminer
+    restart: always
+    ports:
+      - 6080:8080
