@@ -13,7 +13,7 @@ pipeline {
     stages {
     stage("create docker image") {
             steps {
-                echo " ============== start building image =================="
+                echo " ============== start building image update to 10.11 =================="
                 dir ('docker/toolbox') {
                 	sh 'docker-compose build'
                 }
